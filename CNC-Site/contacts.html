@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontakti — CNC Pielāgotu Detaļu Serviss</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-RXf+QSDCUQs6EOGx5Y9k5kU6Dp15l4zQ6ox2jc5u+0pgjIL5l5Rg2K+q68TWfzkLTq0D0B2HfY7Tb4dg3gF8xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #f9f9f9;
+        color: #333;
+      }
+
+      nav {
+        background-color: #202020;
+      }
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem 1rem;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        text-decoration: none;
+        color: white;
+        font-weight: 900;
+        font-size: 1.3rem;
+      }
+      .logo img {
+        height: 40px;
+        width: auto;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 1.5rem;
+        margin: 0;
+        padding: 0;
+      }
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: 900;
+        font-size: 0.95rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        transition: background 0.3s, color 0.3s;
+      }
+      nav ul li a:hover {
+        background-color: #2e2e2e;
+        color: #a86500;
+      }
+
+      header {
+        background-color: #202020;
+        color: white;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 1rem 2rem;
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .contact-info,
+      .map-container,
+      .contact-form {
+        background: white;
+        border-radius: 8px;
+        padding: 2rem;
+        box-shadow: 1px 4px 20px rgb(0 0 0 / 0.1);
+        flex: 1 1 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 400px;
+      }
+
+      .contact-info h2,
+      .map-container h2,
+      .contact-form h2 {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+        color: #111827;
+      }
+
+      .contact-info p {
+        margin: 0.5rem 0;
+        line-height: 1.5;
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 8px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      label {
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        font-family: inherit;
+        resize: vertical;
+      }
+
+      textarea {
+        min-height: 120px;
+      }
+
+      button {
+        background-color: #a86500;
+        border: none;
+        color: white;
+        padding: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #a86500;
+      }
+
+      .align-container {
+        max-width: 1200px;
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+      }
+
+      .align-container h3 {
+        padding: 0.5rem;
+        margin-left: 100px;
+        font-weight: 900;
+        font-size: 2rem;
+      }
+
+      ul.socials {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        list-style: none;
+      }
+
+      ul.socials li a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #ffffff;
+        color: #333;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      ul.socials li a:hover {
+        background-color: #f3f3f3;
+      }
+
+      .socials img{
+        height: 30px;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          flex-direction: column;
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="/pictures/logo.webp" alt="Logo" />
+          <p>Tailored-CNC</p>
+        </a>
+        <ul>
+          <li><a href="index.html">Sākums</a></li>
+          <li><a href="quote.html">Piedāvājums</a></li>
+          <li><a href="projects.html">Projekti</a></li>
+          <li><a href="contacts.html">Kontakti</a></li>
+          <li><a href="marketing.html">Marketings</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="align-container">
+      <h3>Kontakti</h3>
+      <main class="container">
+        <section class="contact-info" aria-label="Kontaktu informācija">
+          <h2>Mūsu kontaktinformācija</h2>
+          <p>
+            <strong>Adrese:</strong> Rīgas iela 12, Pārdaugava, Rīga, LV-2107
+          </p>
+          <p><strong>Telefons:</strong> +371 1234 5678</p>
+          <p><strong>E-pasts:</strong> info@cncserviss.lv</p>
+          <p><strong>Darba laiks:</strong> P-Pk 9:00 - 18:00</p>
+          <p><strong style="margin-left: 95px"></strong> S-Sv Slēgts</p>
+          <p><strong>Socialie tīkli:</strong></p>
+          <ul class="socials">
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="/pictures/facebook.png" class="fab fa-facebook"></img> Facebook
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="/pictures/linkedin.png" class="fab fa-linkedin"></img> LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <img src="/pictures/instagram.png" class="fab fa-instagram"></img> Instagram
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <section
+          class="map-container"
+          aria-label="Karte ar mūsu biroja atrašanās vietu"
+        >
+          <h2>Atrašanās vieta</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2176.2414989862104!2d23.90800137713834!3d56.944663599566354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eedb0cda2743a1%3A0xee1bca8d873f7445!2zUmlnYXMgaWVsYSAxMiwgUGnFhsS3aSwgQmFixKt0ZXMgcGFnYXN0cywgTcSBcnVwZXMgbm92YWRzLCBMVi0yMTA3!5e0!3m2!1slv!2slv!4v1748591162373!5m2!1slv!2slv"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen=""
+          ></iframe>
+        </section>
+
+        <section class="contact-form" aria-label="Kontakta forma">
+          <h2>Sazinies ar mums</h2>
+          <form>
+            <label for="name">Vārds</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Ievadi savu vārdu"
+            />
+
+            <label for="email">E-pasts</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Ievadi savu e-pastu"
+            />
+
+            <label for="message">Ziņa</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="Raksti ziņu šeit"
+            ></textarea>
+
+            <button type="submit">Nosūtīt ziņu</button>
+          </form>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Tailored-CNC</p>
+      </div>
+    </footer>
+  </body>
+</html>
